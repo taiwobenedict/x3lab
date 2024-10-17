@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Mont";
+    src: url("./assets/Mont/Mont-Bold.ttf");
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "Mont";
+    src: url("./assets/Mont/Mont-SemiBold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Mont";
+    src: url("./assets/Mont/Mont-Regular.ttf");
+    font-weight: 400;
+}
+
+body {
+    background: url("./assets/background.webp") center center/cover no-repeat fixed;
+    color: #fff;
+    font-family: "Mont", sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+body::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0B0922CC;
+    z-index: -1;
+}
+
+.font-weight-800 {
+    font-weight: 800;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+.font-size-84 {
+    font-size: 5.25rem;
+}
+
+.font-size-64 {
+    font-size: 4rem;
+}
+
+.font-size-20 {
+    font-size: 1.25rem;
+}
+
+.font-size-16 {
+    font-size: 1rem;
+}
+
+.container {
+    width: 95%;
+    max-width: 75rem;
+    margin-inline: auto;
+    height: 100%;
+    position: relative;
+    padding-top: 4rem;
+}
+
+.logo {
+    max-width: 12.5rem;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.coming-soon {
+    width: 100%;
+    max-width: 14.3125rem;
+    text-align: center;
+    padding: 1rem;
+    border: solid 1px #1B5299;
+    margin-inline: auto;
+}
+
+.heading {
+    text-align: center;
+    line-height: 5.3125rem;
+    margin-top: 3rem;
+    margin-bottom: 3.5rem;
+}
+
+.count-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+.waitlist {
+    padding: 0.5rem 0.625rem 0.5rem 0.625rem;
+    background-color: #fff;
+    max-width: 33.375rem;
+    margin-inline: auto;
+    margin-top: 5rem;
+    border: solid 1px #1B5299;
+    display: flex;
+
+}
+
+#email {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #444;
+    font-family: "Mont", sans-serif;
+}
+
+#email::placeholder {
+    font-family: "Mont", sans-serif;
+    font-weight: 600;
+    color: #A5A5A5;
+    font-size: 1rem;
+}
+
+.waitlist-btn {
+    width: 100%;
+    max-width: 9.125rem;
+    padding: 0.875rem 0.625rem;
+    background-color: #1B5299;
+    color: #fff;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.waitlist-btn:hover {
+    opacity: 0.8;
+}
+
+.footer {
+    height: 8.25rem;
+    background-color: #0B0B1E99;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 100%;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.text-stroke {
+    -webkit-text-stroke: 1px #fff; /* 2px border with black color */
+    color: transparent; /* Color of the inner text */
+  }
+
+  .social {
+    transition: 0.4s;
+  }
+
+  .social:hover {
+    -webkit-text-stroke: 1px #1CFEBA;
+  }
+
+
+@media (max-width: 670px) {
+    .font-size-84 {
+        font-size: 4.25rem;
+    }
+    
+    .font-size-64 {
+        font-size: 2.3rem;
+        line-height: 3rem;
+    }
+
+    
+}
+
+@media (max-width: 1440px) {
+    html {
+        font-size: 10px;
+    }
+}
