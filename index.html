@@ -1,11 +1,15 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>X3LAB</title>
 </head>
+
 <body>
 
     <div class="container">
@@ -16,7 +20,8 @@
         <div class="content-container">
             <div class="content">
                 <div class="coming-soon font-size-16 font-weight-600"> Coming soon</div>
-                <div class="heading font-size-64 font-weight-800">Revolutionizing tech through <br> Innovation | Growth | Creativity</div>
+                <div class="heading font-size-64 font-weight-800">Revolutionizing tech through <br> Innovation | Growth
+                    | Creativity</div>
 
                 <div class="count-down font-size-84 font-weight-800">
                     <span id="days">00</span>
@@ -30,16 +35,19 @@
 
                 <form class="waitlist">
                     <input type="email" name="email" id="email" placeholder="Enter your email">
-                    <button class="waitlist-btn font-weight-600 font-size-16">Join waitlist</button>
+                    <button type="submit" class="waitlist-btn font-weight-600 font-size-16">Join waitlist</button>
                 </form>
             </div>
         </div>
 
         <div class="footer">
             <div class="socials">
-                <div class="social"><i class="fa-brands fa-instagram"></i></div>
-                <div class="social text-stroke"><i class="fa-brands fa-facebook-f"></i></div>
-                <div class="social  text-stroke"><i class="fa-brands fa-linkedin-in"></i></div>
+                <a href="https://www.instagram.com/thex3lab?igsh=eGp3MGcyYzEwdHQz" class="social"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61566362912021&mibextid=LQQJ4d"
+                    class="social text-stroke"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/x3lab/" class="social  text-stroke"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
             </div>
         </div>
 
@@ -47,7 +55,34 @@
 
 
     </div>
-    
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="app.js"></script>
+    <script>
+        const email = document.getElementById("email")
+        const waitlistForm = document.querySelector('.waitlist')
+        
+        
+        
+        function sendEmail(e) {
+            e.preventDefault()
+
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "username",
+                Password: "password",
+                To: 'ajayitaiwotunta@gmail.com',
+                From: email.value,
+                Subject: "X3LAB Waitlist",
+                Body: email.value
+            }).then(
+                message => alert(message)
+            );
+        }
+
+        waitlistForm.addEventListener("submit", sendEmail)
+
+    </script>
 </body>
+
 </html>

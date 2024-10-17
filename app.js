@@ -28,3 +28,5 @@ const countdownFunction = setInterval(function() {
     document.querySelector(".countdown").innerHTML = "Countdown Finished!";
   }
 }, 1000);
+
+

@@ -32,6 +32,11 @@ img {
     width: 100%;
 }
 
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
 body::after {
     content: "";
     width: 100%;
