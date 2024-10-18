@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    --font-size-20: 1.25rem;
+    --font-size-64: 5.5rem;
+    --font-size-84: 6.75rem;
+}
+
 @font-face {
     font-family: "Mont";
     src: url("./assets/Mont/Mont-Bold.ttf");
@@ -57,24 +63,21 @@ body::after {
 }
 
 .font-size-84 {
-    font-size: 5.25rem;
+    font-size: var(--font-size-84);
 }
 
 .font-size-64 {
-    font-size: 4rem;
+    font-size: var(--font-size-64);
 }
 
 .font-size-20 {
-    font-size: 1.25rem;
+    font-size: var(--font-size-20);
 }
 
-.font-size-16 {
-    font-size: 1rem;
-}
 
 .container {
     width: 95%;
-    max-width: 75rem;
+    max-width: 100rem;
     margin-inline: auto;
     height: 100%;
     position: relative;
@@ -82,7 +85,7 @@ body::after {
 }
 
 .logo {
-    max-width: 12.5rem;
+    max-width: 13.5rem;
 }
 
 .content-container {
@@ -107,7 +110,7 @@ body::after {
 
 .heading {
     text-align: center;
-    line-height: 5.3125rem;
+    line-height: 7rem;
     margin-top: 3rem;
     margin-bottom: 3.5rem;
 }
@@ -123,7 +126,7 @@ body::after {
 .waitlist {
     padding: 0.5rem 0.625rem 0.5rem 0.625rem;
     background-color: #fff;
-    max-width: 33.375rem;
+    max-width: 37.375rem;
     margin-inline: auto;
     margin-top: 5rem;
     border: solid 1px #1B5299;
@@ -135,7 +138,7 @@ body::after {
     width: 100%;
     border: none;
     outline: none;
-    font-size: 1.125rem;
+    font-size: var(--font-size-20);
     font-weight: 600;
     color: #444;
     font-family: "Mont", sans-serif;
@@ -145,12 +148,12 @@ body::after {
     font-family: "Mont", sans-serif;
     font-weight: 400;
     color: #A5A5A5;
-    font-size: 1rem;
+    font-size: var(--font-size-20);
 }
 
 .waitlist-btn {
     width: 100%;
-    max-width: 9.125rem;
+    max-width: 10.125rem;
     padding: 0.875rem 0.625rem;
     background-color: #1B5299;
     color: #fff;
@@ -167,7 +170,7 @@ body::after {
 }
 
 .footer {
-    height: 8.25rem;
+    height: 7.25rem;
     background-color: #0B0B1E99;
     width: 100%;
     position: fixed;
@@ -181,47 +184,63 @@ body::after {
     align-items: center;
     gap: 2rem;
     height: 100%;
-    font-size: 1.5rem;
+    font-size: calc(var(--font-size-20) + 5px);
     font-weight: 400;
 }
 
 .text-stroke {
-    -webkit-text-stroke: 1px #fff; /* 2px border with black color */
-    color: transparent; /* Color of the inner text */
-  }
-
-  .social {
-    transition: 0.4s;
-  }
-
-  .social:hover {
-    -webkit-text-stroke: 1px #1CFEBA;
-  }
-
-
-@media (max-width: 670px) {
-    .font-size-84 {
-        font-size: 4.25rem;
-    }
-    
-    .font-size-64 {
-        font-size: 2.3rem;
-        line-height: 3rem;
-    }
-
-    .font-size-16 {
-        font-size: 14px;
-    }
-
-    #email::placeholder {
-        font-size: 14px;
-    }
-
-    
+    -webkit-text-stroke: 1px #fff;
+    /* 2px border with black color */
+    color: transparent;
+    /* Color of the inner text */
 }
 
-@media (max-width: 1440px) {
+.social {
+    transition: 0.4s;
+}
+
+.social:hover {
+    -webkit-text-stroke: 1px #1CFEBA;
+}
+
+
+
+
+@media (max-width: 1600px) {
     html {
         font-size: 10px;
+    }
+}
+
+@media (max-width: 920px) {
+    :root {
+        --font-size-20: 1rem;
+        --font-size-64: 3.7rem;
+        --font-size-84: 5.25rem;
+    }
+
+    .heading {
+        line-height: 1.4;
+    }
+
+    .waitlist {
+        max-width: 30rem;
+    }
+
+    .waitlist-btn {
+        max-width: 9rem;
+    }
+}
+
+@media (max-width: 620px) {
+    :root {
+        --font-size-20: 14px;
+        --font-size-64: 2.3rem;
+        --font-size-84: 5.25rem;
+    }
+
+    .coming-soon {
+        font-size: 16px;
+        max-width: 16rem;
     }
 }
