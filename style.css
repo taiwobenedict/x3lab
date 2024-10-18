@@ -389,6 +389,7 @@ body::after {
 
     .coming-soon {
         font-size: 16px;
-        max-width: 16rem;
+        max-width: 18rem;
+        padding: 1.2rem;
     }
 }
