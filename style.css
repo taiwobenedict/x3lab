@@ -143,7 +143,7 @@ body::after {
 
 #email::placeholder {
     font-family: "Mont", sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     color: #A5A5A5;
     font-size: 1rem;
 }
@@ -159,6 +159,7 @@ body::after {
     outline: none;
     cursor: pointer;
     transition: 0.4s;
+    font-weight: 400;
 }
 
 .waitlist-btn:hover {
@@ -206,6 +207,14 @@ body::after {
     .font-size-64 {
         font-size: 2.3rem;
         line-height: 3rem;
+    }
+
+    .font-size-16 {
+        font-size: 14px;
+    }
+
+    #email::placeholder {
+        font-size: 14px;
     }
 
     
