@@ -21,7 +21,13 @@
 
         <div class="content-container">
             <div class="content">
-                <div class="coming-soon font-size-20 font-weight-600"> Coming soon</div>
+                <div class="coming-soon font-size-20 font-weight-600">
+                    Coming soon
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <div class="heading font-size-64 font-weight-800">Revolutionizing tech through <br> Innovation | Growth
                     | Creativity</div>
 
@@ -37,7 +43,7 @@
 
                 <form class="waitlist">
                     <input type="email" name="email" id="email" placeholder="Enter your email">
-                    <button type="submit" class="waitlist-btn font-weight-600 font-size-20">Join waitlist</button>
+                    <button type="submit" class="waitlist-btn font-weight-600 font-size-20 btn-11">Join waitlist</button>
                 </form>
             </div>
         </div>
@@ -63,23 +69,13 @@
     <script>
         const email = document.getElementById("email")
         const waitlistForm = document.querySelector('.waitlist')
-        
-        
-        
+
+
+
         function sendEmail(e) {
             e.preventDefault()
 
-            Email.send({
-                Host: "smtp.elasticemail.com",
-                Username: "username",
-                Password: "password",
-                To: 'ajayitaiwotunta@gmail.com',
-                From: email.value,
-                Subject: "X3LAB Waitlist",
-                Body: email.value
-            }).then(
-                message => alert(message)
-            );
+
         }
 
         waitlistForm.addEventListener("submit", sendEmail)
